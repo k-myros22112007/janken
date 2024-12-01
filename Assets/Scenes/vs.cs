@@ -44,7 +44,6 @@ public class vs : MonoBehaviour
         {
             case 1:
                 gu.transform.position = position;
-                Debug.Log($"{gu.name} moved to {position}");
                 break;
 
             case 2:
@@ -56,6 +55,7 @@ public class vs : MonoBehaviour
                 pa.transform.position = position;
                 Debug.Log($"{pa.name} moved to {position}");
                 break;
+
 
             default:
                 Debug.LogError("Invalid random number generated.");

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class global : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static class global_1
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public static int round_count = 0;
     }
 }
