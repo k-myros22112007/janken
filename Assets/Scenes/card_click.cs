@@ -151,8 +151,6 @@ public class card_click : MonoBehaviourPun
             {
                 // クリックされたオブジェクトの名前を表示
                 Debug.Log($"{targetObject.name} was clicked!");
-
-                
             }
         }
 
@@ -233,8 +231,6 @@ public class card_click : MonoBehaviourPun
         {
             Debug.LogWarning($"{gameObject.name} does not have a Collider component.");
         }
-
-
     }
 
     [PunRPC]
