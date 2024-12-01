@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR;
+using static global;
 
 
 public class card_click : MonoBehaviourPun
 {
     int hand = 0;
+
+    bool p1 = false;
+    bool p2 = false;
 
     public class ClickListener : MonoBehaviour
     {
@@ -37,37 +41,44 @@ public class card_click : MonoBehaviourPun
 
     void OnMouseDown()
     {
+        p1 = true;
+
         // クリックしたオブジェクトがすでに移動済みの場合、処理を中断
-        if (objectMoved) return;
+        if (!p1) return;
 
         // タグが条件に合致する場合、移動
         if (gameObject.CompareTag("gu_1") || gameObject.CompareTag("gu_2") ||
-            gameObject.CompareTag("gu_3") || gameObject.CompareTag("gu_4") ||
+            gameObject.CompareTag("gu_3") ||
             gameObject.CompareTag("tyoki_1") || gameObject.CompareTag("tyoki_2") ||
-            gameObject.CompareTag("tyoki_3") || gameObject.CompareTag("tyoki_4") ||
+            gameObject.CompareTag("tyoki_3") ||
             gameObject.CompareTag("pa_1") || gameObject.CompareTag("pa_2") ||
-            gameObject.CompareTag("pa_3") || gameObject.CompareTag("pa_4"))
+            gameObject.CompareTag("pa_3"))
         {
             transform.position = targetPosition;
             objectMoved = true; // フラグを立てて他のオブジェクトが移動しないようにする
             Debug.Log($"{gameObject.name} moved to {targetPosition}");
-            if (gameObject.CompareTag("gu_1") || gameObject.CompareTag("gu_2") || gameObject.CompareTag("gu_3") || gameObject.CompareTag("gu_4"))
+            if (gameObject.CompareTag("gu_1") || gameObject.CompareTag("gu_2") || gameObject.CompareTag("gu_3") )
             {
                 hand = 1;
             }
-            if (gameObject.CompareTag("tyoki_1") || gameObject.CompareTag("tyoki_2") ||gameObject.CompareTag("tyoki_3") || gameObject.CompareTag("tyoki_4"))
+            if (gameObject.CompareTag("tyoki_1") || gameObject.CompareTag("tyoki_2") ||gameObject.CompareTag("tyoki_3") )
             {
                 hand = 2;
             }
-            if (gameObject.CompareTag("pa_1") || gameObject.CompareTag("pa_2") || gameObject.CompareTag("pa_3") || gameObject.CompareTag("pa_4"))
+            if (gameObject.CompareTag("pa_1") || gameObject.CompareTag("pa_2") || gameObject.CompareTag("pa_3"))
             {
                 hand = 3;
             }
 
             InvokeRepeating("sendhand",1f,1f);
+
+
             // 他のプレイヤーに手を送信するRPCを呼び出す
             photonView.RPC("ReceiveJankenHand", RpcTarget.Others, hand);
         }
+
+
+
     }
 
     // Start is called before the first frame update
@@ -99,6 +110,8 @@ public class card_click : MonoBehaviourPun
     [PunRPC]
     public void ReceiveJankenHand(int enemy_hand)
     {
+        p2 = true;
+
         if (hand == 0)
         {
             return;
@@ -117,6 +130,51 @@ public class card_click : MonoBehaviourPun
         else
         {
             CancelInvoke("sendhand");
+        }
+
+        global_1.round_count += 1;
+
+        transform.Translate(-1.5f, 0, 0);
+
+        Vector3 newPosition = new Vector3(100, 100, 0);
+
+        switch (global_1.round_count)
+        {
+            case 1:
+                // オブジェクト名で指定して検索し、移動
+
+                GameObject targetObject5 = GameObject.Find("ura_1_5");
+                targetObject5.transform.position = newPosition;
+                break;
+
+            case 2:
+                // オブジェクト名で指定して検索し、移動
+
+                GameObject targetObject4 = GameObject.Find("ura_1_4");
+                targetObject4.transform.position = newPosition;
+                break;
+
+            case 3:
+                // オブジェクト名で指定して検索し、移動
+                GameObject targetObject3 = GameObject.Find("ura_1_3");
+                targetObject3.transform.position = newPosition;
+                break;
+
+            case 4:
+                // オブジェクト名で指定して検索し、移動
+                GameObject targetObject2 = GameObject.Find("ura_1_2");
+                targetObject2.transform.position = newPosition;
+                break;
+
+            case 5:
+                // オブジェクト名で指定して検索し、移動
+                GameObject targetObject1 = GameObject.Find("ura_1_1");
+                targetObject1.transform.position = newPosition;
+                break;
+
+            default:
+                Debug.LogError("Invalid random number generated.");
+                break;
         }
     }
 
