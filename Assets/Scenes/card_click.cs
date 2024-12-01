@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using UnityEngine.XR;
 
 
-public class card_click : MonoBehaviour
+public class card_click : MonoBehaviourPun
 {
+    int hand = 0;
+
     public class ClickListener : MonoBehaviour
     {
         private GameObject targetObject;
@@ -47,6 +51,22 @@ public class card_click : MonoBehaviour
             transform.position = targetPosition;
             objectMoved = true; // フラグを立てて他のオブジェクトが移動しないようにする
             Debug.Log($"{gameObject.name} moved to {targetPosition}");
+            if (gameObject.CompareTag("gu_1") || gameObject.CompareTag("gu_2") || gameObject.CompareTag("gu_3") || gameObject.CompareTag("gu_4"))
+            {
+                hand = 1;
+            }
+            if (gameObject.CompareTag("tyoki_1") || gameObject.CompareTag("tyoki_2") ||gameObject.CompareTag("tyoki_3") || gameObject.CompareTag("tyoki_4"))
+            {
+                hand = 2;
+            }
+            if (gameObject.CompareTag("pa_1") || gameObject.CompareTag("pa_2") || gameObject.CompareTag("pa_3") || gameObject.CompareTag("pa_4"))
+            {
+                hand = 3;
+            }
+
+            InvokeRepeating("sendhand",1f,1f);
+            // 他のプレイヤーに手を送信するRPCを呼び出す
+            photonView.RPC("ReceiveJankenHand", RpcTarget.Others, hand);
         }
     }
 
@@ -74,5 +94,34 @@ public class card_click : MonoBehaviour
         }
 
 
+    }
+
+    [PunRPC]
+    public void ReceiveJankenHand(int enemy_hand)
+    {
+        if (hand == 0)
+        {
+            return;
+        }
+        //こちら側が勝利
+        else if((hand ==1 && enemy_hand == 2) || (hand == 2 && enemy_hand == 3) || (hand == 3 || enemy_hand == 1))
+        {
+            CancelInvoke("sendhand");
+        }
+        //こちら側が負け
+        else if((hand == 1 && enemy_hand == 3) || (hand == 2 && enemy_hand == 1) || (hand == 3 || enemy_hand == 2))
+        {
+            CancelInvoke("sendhand");
+        }
+        //あいこ
+        else
+        {
+            CancelInvoke("sendhand");
+        }
+    }
+
+    private void sendhand()
+    {
+        photonView.RPC("ReceiveJankenHand", RpcTarget.Others, hand);
     }
 }
