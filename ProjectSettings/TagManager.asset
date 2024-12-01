@@ -3,7 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - gu_1
+  - gu_2
+  - gu_3
+  - gu_4
+  - tyoki_1
+  - tyoki_2
+  - tyoki_3
+  - tyoki_4
+  - pa_1
+  - pa_2
+  - pa_3
+  - pa_4
+  - ura_1
+  - ura_2
+  - ura_3
+  - ura_4
+  - ura_5
   layers:
   - Default
   - TransparentFX
