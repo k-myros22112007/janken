@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 3877875}
   - component: {fileID: 3877874}
   - component: {fileID: 3877876}
+  - component: {fileID: 3877877}
   m_Layer: 0
   m_Name: pa_1_4
   m_TagString: pa_4
@@ -252,6 +253,72 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.65, y: 9.18}
   m_EdgeRadius: 0
+--- !u!114 &3877877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 16
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!1 &216029701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216029703}
+  - component: {fileID: 216029702}
+  m_Layer: 0
+  m_Name: join_controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &216029702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216029701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62f63c67a627b748b223629edd79e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &216029703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216029701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 859.5, y: 311, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326097919
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +331,7 @@ GameObject:
   - component: {fileID: 326097920}
   - component: {fileID: 326097922}
   - component: {fileID: 326097923}
+  - component: {fileID: 326097924}
   m_Layer: 0
   m_Name: gu_1_2
   m_TagString: gu_2
@@ -396,6 +464,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 1.5, y: 0, z: 0}
+--- !u!114 &326097924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326097919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 8
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &326956441
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +498,7 @@ GameObject:
   - component: {fileID: 326956442}
   - component: {fileID: 326956444}
   - component: {fileID: 326956445}
+  - component: {fileID: 326956446}
   m_Layer: 0
   m_Name: pa_1_3
   m_TagString: pa_3
@@ -540,6 +631,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 1.5, y: 0, z: 0}
+--- !u!114 &326956446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326956441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 15
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &528943606
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +665,7 @@ GameObject:
   - component: {fileID: 528943607}
   - component: {fileID: 528943609}
   - component: {fileID: 528943610}
+  - component: {fileID: 528943611}
   m_Layer: 0
   m_Name: pa_1_2
   m_TagString: pa_2
@@ -684,6 +798,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 1.5, y: 0, z: 0}
+--- !u!114 &528943611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528943606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 14
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &633954542
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633954544}
   - component: {fileID: 633954543}
+  - component: {fileID: 633954545}
   m_Layer: 0
   m_Name: ura_1_3
   m_TagString: ura_3
@@ -768,6 +905,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &633954545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633954542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 5
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &704899054
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 704899056}
   - component: {fileID: 704899055}
+  - component: {fileID: 704899057}
   m_Layer: 0
   m_Name: ura_1_5
   m_TagString: ura_5
@@ -852,6 +1012,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &704899057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704899054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 7
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &721439075
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +1045,7 @@ GameObject:
   - component: {fileID: 721439077}
   - component: {fileID: 721439076}
   - component: {fileID: 721439078}
+  - component: {fileID: 721439079}
   m_Layer: 0
   m_Name: tyoki_1_4
   m_TagString: tyoki_4
@@ -982,6 +1165,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.66, y: 9.28}
   m_EdgeRadius: 0
+--- !u!114 &721439079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721439075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 12
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &783767055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217722914}
   - component: {fileID: 1217722913}
+  - component: {fileID: 1217722915}
   m_Layer: 0
   m_Name: ura_1_4
   m_TagString: ura_4
@@ -1527,6 +1733,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217722915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217722912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 6
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1245750394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245750396}
   - component: {fileID: 1245750395}
+  - component: {fileID: 1245750397}
   m_Layer: 0
   m_Name: ura_1_1
   m_TagString: ura_1
@@ -1611,6 +1840,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1245750397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245750394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1334398012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1873,7 @@ GameObject:
   - component: {fileID: 1334398014}
   - component: {fileID: 1334398013}
   - component: {fileID: 1334398015}
+  - component: {fileID: 1334398016}
   m_Layer: 0
   m_Name: gu_1_4
   m_TagString: gu_4
@@ -1741,6 +1993,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.66, y: 9.28}
   m_EdgeRadius: 0
+--- !u!114 &1334398016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334398012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 9
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1596236199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,6 +2027,7 @@ GameObject:
   - component: {fileID: 1596236200}
   - component: {fileID: 1596236202}
   - component: {fileID: 1596236203}
+  - component: {fileID: 1596236204}
   m_Layer: 0
   m_Name: tyoki_1_3
   m_TagString: tyoki_3
@@ -1885,6 +2160,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 1.5, y: 0, z: 0}
+--- !u!114 &1596236204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596236199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 11
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1726696147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +2194,7 @@ GameObject:
   - component: {fileID: 1726696148}
   - component: {fileID: 1726696150}
   - component: {fileID: 1726696151}
+  - component: {fileID: 1726696152}
   m_Layer: 0
   m_Name: tyoki_1_1
   m_TagString: tyoki_1
@@ -2029,6 +2327,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 1.5, y: 0, z: 0}
+--- !u!114 &1726696152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726696147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1925025894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2361,7 @@ GameObject:
   - component: {fileID: 1925025895}
   - component: {fileID: 1925025897}
   - component: {fileID: 1925025898}
+  - component: {fileID: 1925025899}
   m_Layer: 0
   m_Name: pa_1_1
   m_TagString: pa_1
@@ -2173,6 +2494,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 1.5, y: 0, z: 0}
+--- !u!114 &1925025899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925025894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 13
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2026621708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2528,7 @@ GameObject:
   - component: {fileID: 2026621709}
   - component: {fileID: 2026621711}
   - component: {fileID: 2026621712}
+  - component: {fileID: 2026621713}
   m_Layer: 0
   m_Name: tyoki_1_2
   m_TagString: tyoki_2
@@ -2317,6 +2661,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.66, y: 9.28}
   m_EdgeRadius: 0
+--- !u!114 &2026621713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026621708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 10
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2143883514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,6 +2693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143883516}
   - component: {fileID: 2143883515}
+  - component: {fileID: 2143883517}
   m_Layer: 0
   m_Name: ura_1_2
   m_TagString: ura_2
@@ -2401,6 +2768,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2143883517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143883514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2423,3 +2812,4 @@ SceneRoots:
   - {fileID: 528943608}
   - {fileID: 326956443}
   - {fileID: 3877875}
+  - {fileID: 216029703}

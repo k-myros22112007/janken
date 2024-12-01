@@ -31,7 +31,7 @@ public class player2 : MonoBehaviour
 
     void OnButtonClick(Button button)
     {
-        SceneManager.LoadScene("vs_2");
+        SceneManager.LoadScene("vs2");
     }
 
 }

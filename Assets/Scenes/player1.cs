@@ -26,7 +26,7 @@ public class player1 : MonoBehaviour
 
     void OnButtonClick(Button button)
     {
-        SceneManager.LoadScene("vs_1");
+        SceneManager.LoadScene("vs");
     }
 
     // Update is called once per frame
