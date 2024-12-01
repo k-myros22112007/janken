@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/start.unity
     guid: b218799550a4ccb4db0a669634b8c9fd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/matching.unity
     guid: 73c8bde1484af3d44a2f42a3f806b689
   - enabled: 0
@@ -26,13 +26,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/vs.unity
     guid: eadaae166e9652c40bbf05a3ade3865e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/vs_1.unity
     guid: 305228880d4026a49b4638d4be06bc11
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/vs_2.unity
     guid: bdd94c1e999bdd24592b76ff0270c28d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test.unity
     guid: edb2873d06f8fc945a522b74c0552aa8
   m_configObjects: {}
